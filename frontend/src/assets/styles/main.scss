@@ -1,0 +1,22 @@
+// SETUP
+@import 'setup/variables';
+@import 'setup/mixins';
+@import 'setup/functions';
+
+// BASICS
+@import 'basics/helpers';
+@import 'basics/base';
+@import 'basics/layout';
+
+// COMPONENTS
+@import 'components/app-footer';
+@import 'components/app-header';
+@import 'components/post-details';
+@import 'components/user-post-list';
+@import 'components/user-details';
+@import 'components/user-page';
+@import 'components/story-add';
+
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+

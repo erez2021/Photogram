@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    align-content: center;
+   
+    // text-align: center;
+ 
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(~@/assets/fonts/proxima/proximanova.otf);
+  }
+
+body {
+    background-color:rgb(248, 248, 248);
+    margin: 0 auto;
+    font-family: 'myFirstFont', Helvetica;
+    color: rgb(75, 70, 70);
+}
+
+
+
+a {
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.user-small-img{
+    height:2rem;
+    width: 2rem;
+   margin: 1rem;
+    border-radius: 50%;
+}
+
+.user-smaller-img{
+    height:22px;
+    width: 22px;
+    border-radius: 50%;
+}
+
+.post-btn {
+    border: none;
+    background-color: white;
+
+    background: none;
+	color:  rgb(230, 220, 220);
+	border: none;
+    
+}
+.active {
+    color: blue;
+    font-weight: bold;
+}
+
+.btn:hover, button{
+    cursor: pointer;
+    opacity: 0.9;
+}

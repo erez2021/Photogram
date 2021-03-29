@@ -1,0 +1,45 @@
+/* Media queries Breakpoint mixins */
+
+@mixin for-mobile-layout {
+    @media (max-width: $break-mobile) {
+      @content;
+    }
+  }
+@mixin for-narrower-layout {
+    @media (max-width: $break-narrower) {
+      @content;
+    }
+  }
+@mixin for-narrow-layout {
+    @media (max-width: $break-narrow) {
+      @content;
+    }
+  }
+@mixin for-tablet-layout {
+    @media (max-width: $break-tablet) {
+      @content;
+    }
+  }
+
+  //aspect ratio mixin
+  @mixin aspect-ratio($width, $height) {
+    position: relative;
+    overflow: hidden;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+    > * {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }  
+    > img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }

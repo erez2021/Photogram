@@ -1,0 +1,107 @@
+.story-add-modal {
+    position: fixed;
+ 
+    height: 400px;
+    width: 400px;
+    border: $border;
+    background-color: white;
+    margin-top: 700px;
+    z-index: 1;
+    border-radius: 20px;
+    left: 37.5%;
+    animation: show 0.5s;
+   transform: scale(1);
+}
+
+@keyframes show {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    } to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.loading {
+    height: 100px;
+    width: 250px;
+}
+
+.story-add-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 35px;
+}
+
+.story-add-form input {
+    margin: 10px;
+ 
+}
+
+.story-add-btn  {
+    margin-top: 10px;
+    background-color:rgb(4, 158, 253);
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+
+ .story-upload-img input{
+    margin-top: 10px;
+    background-color:rgb(4, 158, 253);
+    color: white;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+}
+.drag {
+    color: grey;
+    display: inline-block;
+    padding: 30px 5px;
+    width: 220px;
+    border: 1px dashed gray;
+    border-radius: 8px;
+  }
+.story-add-txt, .story-add-locname{
+    height: 40px;
+    width: 200px;
+    border: $border;
+
+}
+
+input.story-add-txt {
+    margin-top: 50px;
+    font-family: 'myFirstFont'
+}
+
+.upload-message {
+    font-size: rem(16px);
+    font-family: 'Helvetica';
+    margin: 10px;
+}
+
+.story-close-btn {
+    background-color: white;
+    border: none;
+    color: lightgray;
+    border-radius: 50%;
+    float: right;
+    margin: 5px;
+    font-size: 18px;
+}
+
+input.upload-img {
+    display: none;
+}
+
+.cloud {
+    cursor: pointer;
+}

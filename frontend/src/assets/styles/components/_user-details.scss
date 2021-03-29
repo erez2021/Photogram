@@ -1,0 +1,135 @@
+.user-avatar img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+
+}
+
+.user-avatar{
+    width: 260px;
+    height: 150px;
+    margin-bottom:50px ;
+}
+
+.user-details {
+    // border-bottom: $border;
+    margin-left: 70px;
+}
+
+.user-name{
+    font-size: rem(28px);
+}
+
+.followers-link, .following-link{
+    cursor: pointer;
+}
+
+.user-followers{
+    margin: 20px;
+    cursor: pointer;
+}
+
+.user-following {
+    cursor: pointer;
+}
+
+.user-info {
+    margin-bottom: 50px;
+}
+
+.followModal {
+    position: fixed;
+    margin-top: 520px;
+    height: 400px;
+    width: 350px;
+    border-radius: 20px;
+    z-index: 10;
+    border: $border;
+    background-color: white;
+
+}
+
+.modal-header {
+    min-height: rem(32px);
+    text-align: center;
+    padding: 10px;
+    border-bottom: $border;
+}
+
+.modal-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.modal-img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.around-modal {
+    background-color: rgba($color: #2b1616, $alpha: 0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    position: fixed;
+    display: block;
+ 
+}
+
+.show-around-modal {
+    position: unset !important
+}
+
+
+
+.user-posts {
+    margin-right: 12px;
+}
+
+
+@include for-mobile-layout {
+
+
+.user-avatar img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  
+}
+.user-avatar{
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+}
+.user-details {
+
+    margin-left: 20px;
+}
+.followModal {
+    margin-top: 300px;
+    height: 200px;
+    width: 200px;
+}
+
+.user-followers{
+    margin: 10px;
+    cursor: pointer;
+}
+.user-name{
+    font-size: rem(20px)
+}
+
+.user-page {
+    margin-top: 30px;
+}
+.user-activities {
+    font-size: small;
+}
+}
+
+// @include for-small-mobile-layout {
