@@ -173,6 +173,7 @@ margin-bottom: 50px;
 
 
 
+
 .user-post-details {
     display: flex;
 }
@@ -226,8 +227,11 @@ margin-bottom: 50px;
 
 .emoji-wysiwyg-editor{
     &.emoji-vue-textarea{
-        width: 330px !important
+        max-width: 330px !important;
+     
     }
+  
+
 }
 }
 

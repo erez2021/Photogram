@@ -7,7 +7,7 @@ export const storyService = {
   getStorys,
   getById,
   remove,
-  
+
   toggleLike,
   addComment,
   removeComment,
@@ -20,8 +20,8 @@ const storys = [
     "_id": "s101",
     "txt": "Best trip ever",
     "imgUrl": ["https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
-    "https://static.wixstatic.com/media/43b5e4_164e5bae962d44c58ad217a7bb8d32f7.jpg/v1/fill/w_560,h_512,al_c,q_80,usm_0.66_1.00_0.01/43b5e4_164e5bae962d44c58ad217a7bb8d32f7.jpg"] //Can be an array if decide to support multiple imgs
-    ,"createdAt": 1616401700,
+      "https://static.wixstatic.com/media/43b5e4_164e5bae962d44c58ad217a7bb8d32f7.jpg/v1/fill/w_560,h_512,al_c,q_80,usm_0.66_1.00_0.01/43b5e4_164e5bae962d44c58ad217a7bb8d32f7.jpg"] //Can be an array if decide to support multiple imgs
+    , "createdAt": 1616401700,
     "by": {
       "_id": "u101",
       "fullname": "Beni Berman",
@@ -42,7 +42,7 @@ const storys = [
           "imgUrl": "https://machinecurve.com/wp-content/uploads/2019/07/thispersondoesnotexist-1-1022x1024.jpg"
         },
         "txt": "good one!",
-        "likedBy": [ 
+        "likedBy": [
           {
             "_id": "u107",
             "fullname": "Bob Israel Israel",
@@ -98,7 +98,7 @@ const storys = [
           "imgUrl": "https://1ec3qk2gowcy3luxr31yisiwjdm-wpengine.netdna-ssl.com/wp-content/uploads/2013/09/greg.jpg"
         },
         "txt": "good one!",
-        "likedBy": [ 
+        "likedBy": [
           {
             "_id": "u108",
             "fullname": "Yuval Dan",
@@ -154,7 +154,7 @@ const storys = [
           "imgUrl": "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
         },
         "txt": "Probably one of the best!",
-        "likedBy": [ 
+        "likedBy": [
           {
             "_id": "u103",
             "fullname": "Erez Hershkovitz",
@@ -210,7 +210,7 @@ const storys = [
           "imgUrl": "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
         },
         "txt": "Wow! amazing place. have fun Angie",
-        "likedBy": [ 
+        "likedBy": [
           {
             "_id": "u103",
             "fullname": "Erez Hershkovitz",
@@ -266,7 +266,7 @@ const storys = [
           "imgUrl": "https://images.unsplash.com/photo-1569243478800-38c8e6b2f7c6?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8MTgwNzIzM3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
         },
         "txt": "Wow! amazing place. have fun Erez",
-        "likedBy": [ 
+        "likedBy": [
           {
             "_id": "u101",
             "fullname": "Beni Berman",
@@ -378,7 +378,7 @@ const storys = [
           "imgUrl": "https://images.unsplash.com/photo-1569243478800-38c8e6b2f7c6?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8MTgwNzIzM3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
         },
         "txt": "Looks lovely!",
-        "likedBy": [ 
+        "likedBy": [
           {
             "_id": "u101",
             "fullname": "Beni Berman",
@@ -434,7 +434,7 @@ const storys = [
           "imgUrl": "https://images.unsplash.com/photo-1569243478800-38c8e6b2f7c6?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8MTgwNzIzM3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
         },
         "txt": "Looks lovely!",
-        "likedBy": [ 
+        "likedBy": [
           {
             "_id": "u101",
             "fullname": "Beni Berman",
@@ -519,10 +519,12 @@ const storys = [
 async function getStorys() {
   try {
     const storys = await httpService.get(`story/`)
+    console.log('storys',storys);
+
     return storys
-} catch(err) {
+  } catch (err) {
     console.log('cannot get storys')
-}     
+  }
 }
 
 // function getById(storyId) {
@@ -532,24 +534,24 @@ async function getStorys() {
 
 async function getById(storyId) {
   try {
-      return await httpService.get(`story/${storyId}`)
-  } catch(err) {
-      console.log('cannot get story')
-}
+    return await httpService.get(`story/${storyId}`)
+  } catch (err) {
+    console.log('cannot get story')
+  }
 }
 
 
 // function remove(storyId) {
 //   const idx = storys.findIndex(story => story._id === storyId)
-//   storys.splice(idx, 1)
+//  git storys.splice(idx, 1)
 // }
 
 async function remove(storyId) {
   try {
-      return await httpService.delete(`story/${storyId}`)
-  } catch(err) {
-      console.log('cannot delete story')
-}
+    return await httpService.delete(`story/${storyId}`)
+  } catch (err) {
+    console.log('cannot delete story')
+  }
 }
 
 // function addStory(story, loggedinUser) {
@@ -563,51 +565,97 @@ async function remove(storyId) {
 // }
 
 async function addStory(story, loggedinUser) {
-    const minUser = {
-      "_id": loggedinUser._id,
-      "fullname": loggedinUser.fullname,
-      "imgUrl": loggedinUser.imgUrl
-    }
-    story.by= minUser
-    try {
-      return await httpService.post(`story/`, story)
-    } catch(err) {
-      console.log('cannot add story')
-  }
-}
-
-
-
-function toggleLike(storyId, loggedinUser) {
-  const story = storys.find(story => story._id === storyId) // should I switch storys by getStorys() ?
   const minUser = {
     "_id": loggedinUser._id,
     "fullname": loggedinUser.fullname,
     "imgUrl": loggedinUser.imgUrl
   }
-  const idx = story.likedBy.findIndex(item => item._id === minUser._id)
-    if (idx === -1) {story.likedBy.push(minUser)
-  }else {
-    story.likedBy.splice(idx, 1) 
+  story.by = minUser
+  try {
+    return await httpService.post(`story/`, story)
+  } catch (err) {
+    console.log('cannot add story')
   }
 }
 
-function addComment(storyId, loggedinUser, txt) {
-  const story = storys.find(story => story._id === storyId)
-  const minUser =  {
+async function addComment(storyId, loggedinUser, txt) {
+  const minUser = {
     "_id": loggedinUser._id,
     "fullname": loggedinUser.fullname,
     "imgUrl": loggedinUser.imgUrl
   }
-    story.comments.push({by :minUser, txt:txt})
-  }
 
-  function removeComment(commentId,storyId ) {
-    const story = storys.find(story => story._id === storyId)
-    const idx = story.comments.findIndex(comment => comment.id === commentId)
-    story.comments.splice(idx, 1)
-    console.log(story.comments.length)
+const newComment = { by: minUser, txt, storyId }
+  try {
+    console.log('storyId' ,storyId, 'newComment', newComment);
+    await httpService.put(`story`, newComment)
+  } catch (err) {
+    console.log('cannot add comment - front service')
   }
+}
+
+async function removeComment(commentId, storyId) {
+  const story = await getById(storyId)
+  try {
+    return await httpService.put(`story/comment/${commentId}`, story)
+  } catch (err) {
+    console.log('cannot delete comment- front service')
+  }
+}
+
+async function toggleLike(storyId, loggedinUser) {
+  const minUser = {
+    "_id": loggedinUser._id,
+    "fullname": loggedinUser.fullname,
+    "imgUrl": loggedinUser.imgUrl
+  }
+  const like = {storyId, minUser}
+  try {
+    return await httpService.put(`story/like`, like)
+}  catch (err) {
+  console.log('cannot toggle like- front service')
+}
+}
+
+// function toggleLike(storyId, loggedinUser) {
+//   const story = storys.find(story => story._id === storyId) 
+//   const minUser = {
+//     "_id": loggedinUser._id,
+//     "fullname": loggedinUser.fullname,
+//     "imgUrl": loggedinUser.imgUrl
+//   }
+//   const idx = story.likedBy.findIndex(item => item._id === minUser._id)
+//   if (idx === -1) {
+//     story.likedBy.push(minUser)
+//   } else {
+//     story.likedBy.splice(idx, 1)
+//   }
+// }
+
+
+
+// function addComment(storyId, loggedinUser, txt) {
+//   const story = storys.find(story => story._id === storyId)
+//   const minUser =  {
+//     "_id": loggedinUser._id,
+//     "fullname": loggedinUser.fullname,
+//     "imgUrl": loggedinUser.imgUrl
+//   }
+//     story.comments.push({by :minUser, txt:txt})
+//   }
+
+
+
+// function removeComment(commentId,storyId ) {
+//   const story = storys.find(story => story._id === storyId)
+//   const idx = story.comments.findIndex(comment => comment.id === commentId)
+//   story.comments.splice(idx, 1)
+//   console.log(story.comments.length)
+// }
+
+
+
+
 
 
 

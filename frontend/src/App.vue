@@ -23,6 +23,7 @@ export default {
   created() {
  this.$store.dispatch({type: "loadStorys"})
  this.$store.dispatch({type: "loadUsers"})
+ this.$store.dispatch({type: "loggedinUser"})
 }
 }
 

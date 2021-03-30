@@ -7,7 +7,11 @@
         class="remove-btn flex"
         src="@/assets/icons/dots.png"
       />
-       <div @click.self="closeModal"  :class="showAroundModal" class="around-modal"></div>
+      <div
+        @click.self="closeModal"
+        :class="showAroundModal"
+        class="around-modal"
+      ></div>
       <div v-if="openRemoveModal" class="remove-modal center">
         <div @click="removeStory(story._id)" class="remove-post">
           Remove Post
@@ -34,7 +38,7 @@
       </div>
     </div>
     <div class="post-details-image">
-      <img class="home-img  ratio-img" :src="story.imgUrl" />
+      <img class="home-img ratio-img" :src="story.imgUrl" />
     </div>
     <div class="post-details-actions flex">
       <img :src="likeImgUrl" @click="toggleLike(story._id)" class="btn" />
@@ -95,7 +99,7 @@ export default {
   },
   data() {
     return {
-      isBlur : false,
+      isBlur: false,
       openRemoveModal: false,
       showMap: false,
       user: null,
@@ -116,6 +120,7 @@ export default {
       this.$store.dispatch({ type: "savePost", storyId, loggedinUserPosts });
     },
     removeComment(commentId, storyId) {
+      console.log('from post-details' ,commentId);
       this.$store.dispatch({ type: "removeComment", commentId, storyId });
     },
     showProfile(userId) {
@@ -152,12 +157,12 @@ export default {
   },
 
   computed: {
-       showAroundModal () {
-      return {'show-around-modal' : !this.openRemoveModal}
+    showAroundModal() {
+      return { "show-around-modal": !this.openRemoveModal };
     },
-      closeModal() {
-    this.openRemoveModal = false
-  },
+    closeModal() {
+      this.openRemoveModal = false;
+    },
     getLoggedinUserSavedPosts() {
       return this.$store.getters.loggedinUserSavedPosts;
     },
@@ -178,13 +183,14 @@ export default {
       return today.toDateString();
     },
     loggedinUser() {
+      const loggedUser = this.$store.getters.getLoggedinUser;
+
       return this.$store.getters.getLoggedinUser;
     },
   },
   created() {
-    const user = userService.getById(this.$route.params.userId);
+    const user = this.loggedinUser;
     this.user = user;
-   
   },
   components: {
     storyService,

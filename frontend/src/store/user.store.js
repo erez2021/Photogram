@@ -17,6 +17,7 @@ export const userStore = {
         console.log('state.users', state.users)
       },
       setLoggedinUser(state,{loggedinUser}) {
+        console.log('user mutationsssss',loggedinUser);
          state.loggedinUser = loggedinUser 
       }
       },
@@ -43,8 +44,10 @@ export const userStore = {
         })
       },
       async loggedinUser(context) {
+        console.log('set loged in user');
         const user = await userService.getLoggedinUser()
-        context.commit({type: 'setLoggedinUser', user})
+        console.log('user store', user);
+        context.commit({type: 'setLoggedinUser',loggedinUser: user})
       }
   },
 

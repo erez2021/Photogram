@@ -1,5 +1,6 @@
 import { storageService } from './async-storage.service'
 import { httpService } from './http.service'
+import { utilService } from './util.service'
 
 
 
@@ -293,6 +294,7 @@ async function getUsers() {
 // }
 
 async function getById(userId) {
+  console.log('userId' ,userId)
   try {
       return await httpService.get(`user/${userId}`)
   } catch(err) {

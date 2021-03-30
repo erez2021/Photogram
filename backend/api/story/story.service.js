@@ -10,19 +10,23 @@ module.exports = {
     // getBystoryname,
     remove,
     update,
-    add
+    add,
+    removeComment,
+    toggleLike
+
 }
 
 async function query(filterBy = {}) {
     const criteria = _buildCriteria(filterBy)
     try {
         const collection = await dbService.getCollection('story')
-        var storys = await collection.find(criteria).toArray()
+        var storys = await collection.find().toArray()
+        console.log('storys query',storys.length);
         return storys
-        } catch (err) {
-            loggerService.error('cannot find storys', err)
-            throw err
-        }
+    } catch (err) {
+        loggerService.error('cannot find storys', err)
+        throw err
+    }
 }
 
 async function getById(storyId) {
@@ -46,39 +50,72 @@ async function remove(storyId) {
     }
 }
 
-async function update(story) {
+async function toggleLike(storyId, like) {
     try {
-        // peek only updatable fields!
-        // const storyToSave = {
-        //     _id: ObjectId(story._id),
-        //     price : story.price,
-        //     type: story.type,
-        //     inStock: story.inStock
-        // }
-        story._id = ObjectId(story._id)
+        const storyToUpdate = await getById(storyId)
+        console.log('like', like);
+        const idx = storyToUpdate.likedBy.findIndex(item => item._id === like.minUser._id)
+        if (idx === -1) {
+            storyToUpdate.likedBy.push(like.minUser)
+        } else {
+            storyToUpdate.likedBy.splice(idx, 1)
+        }
         const collection = await dbService.getCollection('story')
-        await collection.updateOne({ '_id': story._id }, { $set: story })
-        return story;
+        await collection.updateOne({ '_id': storyToUpdate._id }, { $set: storyToUpdate })
     } catch (err) {
-        logger.error(`cannot update story ${story._id}`, err)
+        logger.error(`cannot toggle like from back service`, err)
+        throw err
+    }
+}
+
+async function removeComment(commentId, storyId) {
+    try {
+        const storyToUpdate = await getById(storyId)
+        const idx = storyToUpdate.comments.findIndex(comment => comment.id === commentId)
+        storyToUpdate.comments.splice(idx, 1)
+        const collection = await dbService.getCollection('story')
+        await collection.updateOne({ '_id': storyToUpdate._id }, { $set: storyToUpdate })
+        return storyToUpdate
+    } catch (err) {
+        logger.error(`cannot remove comment ${commentId}`, err)
+        throw err
+    }
+}
+
+// async function addComment(story, newComment) {
+//     try {
+//         const collection = await dbService.getCollection('story')
+//         const story = await collection.findOne({ story})
+//         story.comments.push(newComment)
+//         await collection.insertOne(story)
+//     } catch (err) {
+//         logger.error(`cannot remove comment ${commentId}`, err)
+//         throw err
+//     }
+// }
+
+async function update(storyId, newComment) {
+    try {
+        // newComment = {id : ObjectId()}
+        newComment.id = _makeId()
+        const storyToSave = await getById(storyId)
+        console.log('storyToSave storyToSave', storyToSave);
+        storyToSave.comments.push(newComment)
+        const collection = await dbService.getCollection('story')
+        await collection.updateOne({ '_id': storyToSave._id }, { $set: storyToSave })
+        return storyToSave;
+    } catch (err) {
+        logger.error(`cannot update story ${storyId}`, err)
         throw err
     }
 }
 
 async function add(story) {
     try {
-        // peek only updatable fields!
-        // const storyToAdd = {
-        //     name : story.name,
-        //     price : story.price,
-        //     type: story.type,
-        //     inStock: story.inStock
-        // }
         const collection = await dbService.getCollection('story')
-        // await collection.insertOne(storyToAdd)
+        delete story._id
         await collection.insertOne(story)
         return story
-        // return storyToAdd
     } catch (err) {
         logger.error('cannot insert story', err)
         throw err

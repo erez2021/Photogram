@@ -27,7 +27,7 @@ export default new Vuex.Store({
       console.log(state.storys[0].likedBy)
     },
     addStory(state, {story}) {
-      state.storys.push(story)
+      state.storys.unshift(story)
     },
   removeComment(state, {commentId, storyId}) {
     const story = state.storys.find(story => story._id === storyId)
@@ -69,17 +69,18 @@ export default new Vuex.Store({
       await storyService.remove(storyId)
       dispatch({type: 'loadStorys'})
     },
-    toggleLike({ dispatch}, {storyId, loggedinUser}) {
-      storyService.toggleLike(storyId, loggedinUser)
+    async toggleLike({ dispatch}, {storyId, loggedinUser}) {
+      await storyService.toggleLike(storyId, loggedinUser)
       dispatch({type: 'loadStorys'})
     },
-    addComment({dispatch}, {storyId, loggedinUser, txt}) {
-      storyService.addComment(storyId, loggedinUser, txt)
+    async addComment({dispatch}, {storyId, loggedinUser, txt}) {
+      console.log('from store loggedinUser:',loggedinUser)
+      await storyService.addComment(storyId, loggedinUser, txt)
       dispatch({type: 'loadStorys'})
     },
-    removeComment(context, {commentId, storyId}) {
-      console.log(commentId, storyId)
-      storyService.removeComment(commentId, storyId)
+    async removeComment(context, {commentId, storyId}) {
+      console.log('commentId,  storyId' ,commentId, storyId)
+     await storyService.removeComment(commentId, storyId)
       context.commit({type: 'removeComment', commentId, storyId})
      
     }

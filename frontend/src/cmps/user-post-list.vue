@@ -87,11 +87,7 @@
 import { userService } from "../services/user.service";
 
 export default {
-  props: {
-    user: {
-      type: Promise,
-    },
-  },
+  props:['user'],
   data() {
     return {
       showModal: false,
@@ -164,6 +160,8 @@ export default {
       return today.toDateString();
     },
     loggedinUser() {
+      const loggedUser = this.$store.getters.getLoggedinUser;
+      console.log('this.$store.getters.getLoggedinUser;', loggedUser);
       return this.$store.getters.getLoggedinUser;
     },
     getStorys() {
@@ -172,7 +170,7 @@ export default {
   },
 
   created() {
-    const user = userService.getById(this.$route.params.id);
+    const user =  userService.getById(this.$route.params.id);
     this.user = user;
   },
 };

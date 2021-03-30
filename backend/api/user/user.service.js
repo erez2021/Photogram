@@ -9,7 +9,7 @@ module.exports = {
     getById,
     getByUsername,
     remove,
-    update,
+    // update,
     add
 }
 
@@ -34,10 +34,11 @@ async function query(filterBy = {}) {
 
 async function getById(userId) {
     try {
-        console.log({userId})
+        // console.log('userId backend service', userId)
         const collection = await dbService.getCollection('user')
         const user = await collection.findOne({ '_id': ObjectId(userId) })
         // user.givenReviews = await reviewService.query({ byUserId: ObjectId(user._id) })
+   
         // user.givenReviews = user.givenReviews.map(review => {
         //     delete review.byUser
         //     return review
@@ -70,23 +71,23 @@ async function remove(userId) {
     }
 }
 
-async function update(user) {
-    try {
-        // peek only updatable fields!
-        const userToSave = {
-            _id: ObjectId(user._id),
-            username: user.username,
-            fullname: user.fullname,
-            // score: user.score
-        }
-        const collection = await dbService.getCollection('user')
-        await collection.updateOne({ '_id': userToSave._id }, { $set: userToSave })
-        return userToSave;
-    } catch (err) {
-        logger.error(`cannot update user ${user._id}`, err)
-        throw err
-    }
-}
+// async function update(user) {
+//     try {
+//         // peek only updatable fields!
+//         const userToSave = {
+//             _id: ObjectId(user._id),
+//             username: user.username,
+//             fullname: user.fullname,
+//             // score: user.score
+//         }
+//         const collection = await dbService.getCollection('user')
+//         await collection.updateOne({ '_id': userToSave._id }, { $set: userToSave })
+//         return userToSave;
+//     } catch (err) {
+//         logger.error(`cannot update user ${user._id}`, err)
+//         throw err
+//     }
+// }
 
 async function add(user) {
     try {

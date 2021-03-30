@@ -33,7 +33,7 @@
         <router-link
           class="link-btn"
           style="text-decoration: none"
-          :to="'/about'"
+          :to="'/'"
           ><img src="@/assets/icons/heart.png"
         /></router-link>
         <router-link
