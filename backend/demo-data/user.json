@@ -1,0 +1,263 @@
+[
+    {
+        "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+        "username" : "BeniB",
+        "password" : "Beni123",
+        "fullname" : "Beni Berman",
+        "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        "createdAt" : 123543452.0,
+        "following" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3da"},
+                "fullname" : "Yuval Dan",
+                "imgUrl" : "https://1ec3qk2gowcy3luxr31yisiwjdm-wpengine.netdna-ssl.com/wp-content/uploads/2013/09/greg.jpg"
+            }
+        ],
+        "followers" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d5"},
+                "fullname" : "Erez Hershkovitz",
+                "imgUrl" : "https://storage.pixteller.com/designs/designs-images/2016-11-19/02/thumbs/img_page_1_58305b35ebf5e.png"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }
+        ],
+        "savedPostIds" : [ 
+              {  "$oid" :"605df51d92321c342329d3e1"}, 
+              {  "$oid" :"605df51d92321c342329d3df"}, 
+              {  "$oid" :"605df51d92321c342329d3e2"}
+        ]
+    },
+    {
+        "_id" :   {  "$oid" :"605dde7c92321c342329d3d4"},
+        "username" : "SamiN",
+        "password" : "Sami123",
+        "fullname" : "Sami Nagar",
+        "imgUrl" : "https://media1.s-nbcnews.com/i/newscms/2020_44/3423879/hayes-brown-msnbc_c32517cd5919da684844af66f0eb84a5.png",
+        "createdAt" : 123543452.0,
+        "following" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3da"},
+                "fullname" : "Yuval Dan",
+                "imgUrl" : "https://1ec3qk2gowcy3luxr31yisiwjdm-wpengine.netdna-ssl.com/wp-content/uploads/2013/09/greg.jpg"
+            }
+        ],
+        "followers" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }
+        ],
+        "savedPostIds" : [ 
+              {  "$oid" :"605df51d92321c342329d3df"}, 
+              {  "$oid" :"605df51d92321c342329d3e2"}, 
+              {  "$oid" :"605df51d92321c342329d3e1"}
+        ]
+    },
+    {
+        "_id" :   {  "$oid" :"605dde7c92321c342329d3d5"},
+        "username" : "ErezH",
+        "password" : "Erez123",
+        "fullname" : "Erez Hershkovitz",
+        "imgUrl" : "https://storage.pixteller.com/designs/designs-images/2016-11-19/02/thumbs/img_page_1_58305b35ebf5e.png",
+        "createdAt" : 123543452.0,
+        "following" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3da"},
+                "fullname" : "Yuval Dan",
+                "imgUrl" : "https://1ec3qk2gowcy3luxr31yisiwjdm-wpengine.netdna-ssl.com/wp-content/uploads/2013/09/greg.jpg"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }
+        ],
+        "followers" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }
+        ],
+        "savedPostIds" : [ 
+              {  "$oid" :"605df51d92321c342329d3df"}, 
+              {  "$oid" :"605e2c7892321c342329d3e6"}, 
+              {  "$oid" :"605df51d92321c342329d3e3"}
+        ]
+    },
+    {
+        "_id" :   {  "$oid" :"605dde7c92321c342329d3d6"},
+        "username" : "AngieB",
+        "password" : "Angie123",
+        "fullname" : "Angie Berg",
+        "imgUrl" : "https://images.unsplash.com/photo-1569243478800-38c8e6b2f7c6?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTd8MTgwNzIzM3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        "createdAt" : 123543452.0,
+        "following" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3da"},
+                "fullname" : "Yuval Dan",
+                "imgUrl" : "https://1ec3qk2gowcy3luxr31yisiwjdm-wpengine.netdna-ssl.com/wp-content/uploads/2013/09/greg.jpg"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d8"},
+                "fullname" : "Yael Ben",
+                "imgUrl" : "https://media.terminalx.com/pub/media/catalog/product/cache/f112238e8de94b6d480bd02e7a9501b8/x/6/x628110005-11598959998.jpg"
+            }
+        ],
+        "followers" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }
+        ],
+        "savedPostIds" : [ 
+              {  "$oid" :"605df51d92321c342329d3df"}, 
+              {  "$oid" :"605df51d92321c342329d3dd"}, 
+              {  "$oid" :"605df51d92321c342329d3e3"}
+        ]
+    },
+    {
+        "_id" :   {  "$oid" :"605dde7c92321c342329d3d7"},
+        "username" : "JimG",
+        "password" : "Jim123",
+        "fullname" : "Jim Gordon",
+        "imgUrl" : "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        "createdAt" : 123543452.0,
+        "following" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d5"},
+                "fullname" : "Erez Hershkovitz",
+                "imgUrl" : "https://storage.pixteller.com/designs/designs-images/2016-11-19/02/thumbs/img_page_1_58305b35ebf5e.png"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }
+        ],
+        "followers" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d8"},
+                "fullname" : "Yael Ben",
+                "imgUrl" : "https://media.terminalx.com/pub/media/catalog/product/cache/f112238e8de94b6d480bd02e7a9501b8/x/6/x628110005-11598959998.jpg"
+            }
+        ],
+        "savedPostIds" : [ 
+              {  "$oid" :"605df51d92321c342329d3df"}, 
+              {  "$oid" :"605df51d92321c342329d3de"}, 
+              {  "$oid" :"605df51d92321c342329d3e2"}
+        ]
+    },
+    {
+        "_id" :   {  "$oid" :"605dde7c92321c342329d3d8"},
+        "username" : "YaelB",
+        "password" : "Yael123",
+        "fullname" : "Yael Ben",
+        "imgUrl" : "https://media.terminalx.com/pub/media/catalog/product/cache/f112238e8de94b6d480bd02e7a9501b8/x/6/x628110005-11598959998.jpg",
+        "createdAt" : 123543452.0,
+        "following" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3da"},
+                "fullname" : "Yuval Dan",
+                "imgUrl" : "https://1ec3qk2gowcy3luxr31yisiwjdm-wpengine.netdna-ssl.com/wp-content/uploads/2013/09/greg.jpg"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d5"},
+                "fullname" : "Erez Hershkovitz",
+                "imgUrl" : "https://storage.pixteller.com/designs/designs-images/2016-11-19/02/thumbs/img_page_1_58305b35ebf5e.png"
+            }
+        ],
+        "followers" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d7"},
+                "fullname" : "Bob Israel",
+                "imgUrl" : "https://machinecurve.com/wp-content/uploads/2019/07/thispersondoesnotexist-1-1022x1024.jpg"
+            }
+        ],
+        "savedPostIds" : [ 
+              {  "$oid" :"605df51d92321c342329d3df"}, 
+              {  "$oid" :"605e2c7892321c342329d3e6"}, 
+              {  "$oid" :"605df51d92321c342329d3e2"}
+        ]
+    },
+    {
+        "_id" :   {  "$oid" :"605dde7c92321c342329d3d9"},
+        "username" : "BobSfog",
+        "password" : "Bob123",
+        "fullname" : "Bob Israel",
+        "imgUrl" : "https://machinecurve.com/wp-content/uploads/2019/07/thispersondoesnotexist-1-1022x1024.jpg",
+        "createdAt" : 123543452.0,
+        "following" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d5"},
+                "fullname" : "Erez Hershkovitz",
+                "imgUrl" : "https://storage.pixteller.com/designs/designs-images/2016-11-19/02/thumbs/img_page_1_58305b35ebf5e.png"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }
+        ],
+        "followers" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }
+        ],
+        "savedPostIds" : [ 
+              {  "$oid" :"605df51d92321c342329d3df"}, 
+              {  "$oid" :"605df51d92321c342329d3e0"}, 
+              {  "$oid" :"605df51d92321c342329d3e3"}
+        ]
+    },
+    {
+        "_id" :   {  "$oid" :"605dde7c92321c342329d3da"},
+        "username" : "YuvalD",
+        "password" : "Yuval123",
+        "fullname" : "Yuval Dan",
+        "imgUrl" : "https://1ec3qk2gowcy3luxr31yisiwjdm-wpengine.netdna-ssl.com/wp-content/uploads/2013/09/greg.jpg",
+        "createdAt" : 123543452.0,
+        "following" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d5"},
+                "fullname" : "Erez Hershkovitz",
+                "imgUrl" : "https://storage.pixteller.com/designs/designs-images/2016-11-19/02/thumbs/img_page_1_58305b35ebf5e.png"
+            }
+        ],
+        "followers" : [ 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d3"},
+                "fullname" : "Beni Berman",
+                "imgUrl" : "https://images.unsplash.com/photo-1529974019031-b0cd38fd54fc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzl8fHZpZXd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+            }, 
+            {
+                "_id" :   {  "$oid" :"605dde7c92321c342329d3d5"},
+                "fullname" : "Erez Hershkovitz",
+                "imgUrl" : "https://storage.pixteller.com/designs/designs-images/2016-11-19/02/thumbs/img_page_1_58305b35ebf5e.png"
+            }
+        ],
+        "savedPostIds" : [ 
+              {  "$oid" :"605df51d92321c342329d3df"}, 
+              {  "$oid" :"605df51d92321c342329d3e0"}, 
+              {  "$oid" :"605df51d92321c342329d3e3"}
+        ]
+    }
+]
