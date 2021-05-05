@@ -105,3 +105,13 @@ input.upload-img {
 .cloud {
     cursor: pointer;
 }
+
+@include for-mobile-layout {
+.story-add-modal {  
+    position: fixed;   
+    height: 300px;
+    width: 220px;
+    margin-top: 300px;
+    
+}
+}

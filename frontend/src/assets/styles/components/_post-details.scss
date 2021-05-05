@@ -92,11 +92,16 @@ position: fixed;
     // overflow: hidden;
     
     margin-left: 10px;
-    min-height: rem(18px);
+    height: rem(48px);
     font-size: rem(14px);
     &.in-modal{
         margin-left: unset;
     }
+}
+.post-details-comments-home{
+    margin-left: 10px;
+    height: rem(20px);
+    font-size: rem(14px);
 }
 
 
@@ -149,29 +154,6 @@ margin-bottom: 50px;
     border: none;
     // border-bottom: $border;
 }
-.emoji-wysiwyg-editor{
-    border: none;
-    padding-left: 30px;
-    padding-top: 12px;
-   
-    &.emoji-vue-textarea{
-        width: 570px !important
-    }
-}
-
-.emoji-picker-icon {
-    right: unset;
-    z-index: 1;
-    margin-left: 5px;
-    margin-top: 5px;
-    padding-right: 5px;
-}
-
-.emoji-wysiwyg-editor .emoji-vue-textarea {
-    width: 570px;
-}
-
-
 
 
 .user-post-details {
@@ -184,8 +166,8 @@ margin-bottom: 50px;
 
 .gmap {
     position: fixed;
-    right: 15px;
-    bottom: 15px;
+    z-index: 5;
+
 }
 
 .wrapper {
@@ -204,6 +186,10 @@ margin-bottom: 50px;
     &.emoji-vue-textarea{
         width: 430px !important
     }
+}
+.gmap {
+    width: 250px !important;
+    height: 250px!important;
 }
 }
 

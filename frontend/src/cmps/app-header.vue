@@ -18,24 +18,14 @@
           :to="'/'"
           ><img class="nav-icon" :src="movePage" @click="togglePic()"
         /></router-link>
-        <router-link
-          class="link-btn"
-          style="text-decoration: none"
-          :to="'/about'"
-          ><img src="@/assets/icons/messenger.png"
-        /></router-link>
+     
         <a
           class="link-btn"
           style="text-decoration: none"
           ><img src="@/assets/icons/plus.png" @click="showModal"
         /></a>
         <story-add v-if="isAddModal" @closeModal="isAddModal=null"/>
-        <router-link
-          class="link-btn"
-          style="text-decoration: none"
-          :to="'/'"
-          ><img src="@/assets/icons/heart.png"
-        /></router-link>
+  
         <router-link
           class="link-btn"
           style="text-decoration: none"

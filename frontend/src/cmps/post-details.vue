@@ -29,7 +29,7 @@
             {{ story.by.fullname }}
           </div>
 
-          <gmap-map :pos="pos" v-if="showMap" />
+          <gmap-map :pos="pos" v-if="showMap" @closeMap="showMap=null" />
 
           <div class="post-location btn" @click="showLocation(story.loc)">
             {{ story.locname }}
@@ -42,11 +42,7 @@
     </div>
     <div class="post-details-actions flex">
       <img :src="likeImgUrl" @click="toggleLike(story._id)" class="btn" />
-      <img
-        :src="toggleSavePic"
-        @click="savePost(story._id)"
-        class="save-post btn"
-      />
+   
     </div>
     <div class="post-details-likes">
       <div>{{ story.likedBy.length }} likes</div>
@@ -54,7 +50,7 @@
     <div class="post-details-lines">{{ story.txt }}</div>
     <div v-for="comment in story.comments" :key="comment._id">
       <div class="post-details-comments-father flex">
-        <div class="post-details-comments flex-no-space">
+        <div class="post-details-comments-home flex-no-space">
           <div class="user-comment">{{ comment.by.fullname }}</div>
           <div class="user-comment-wrap">: {{ comment.txt }}</div>
         </div>
@@ -69,13 +65,11 @@
     <div class="post-details-date">{{ getDate }}</div>
     <div class="post">
       <form @submit.prevent="addComment(story._id)" class="post-form flex">
-        <VueEmoji
-          ref="emoji"
-          @input="onInput"
-          @change="isActive = true"
+         <input
+          @input="isActive = true"
           type="text"
           class="post-details-input"
-          :value="comment.txt"
+          v-model="comment.txt"
           placeholder="Add a comment.."
         />
 
@@ -140,6 +134,8 @@ export default {
       this.isActive = false;
     },
     removeStory(storyId) {
+      alert('Only Erez is allowed to delete posts')
+      return
       this.$store.dispatch({ type: "removeStory", storyId });
     },
     showLocation(pos) {

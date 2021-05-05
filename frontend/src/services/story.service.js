@@ -617,42 +617,6 @@ async function toggleLike(storyId, loggedinUser) {
 }
 }
 
-// function toggleLike(storyId, loggedinUser) {
-//   const story = storys.find(story => story._id === storyId) 
-//   const minUser = {
-//     "_id": loggedinUser._id,
-//     "fullname": loggedinUser.fullname,
-//     "imgUrl": loggedinUser.imgUrl
-//   }
-//   const idx = story.likedBy.findIndex(item => item._id === minUser._id)
-//   if (idx === -1) {
-//     story.likedBy.push(minUser)
-//   } else {
-//     story.likedBy.splice(idx, 1)
-//   }
-// }
-
-
-
-// function addComment(storyId, loggedinUser, txt) {
-//   const story = storys.find(story => story._id === storyId)
-//   const minUser =  {
-//     "_id": loggedinUser._id,
-//     "fullname": loggedinUser.fullname,
-//     "imgUrl": loggedinUser.imgUrl
-//   }
-//     story.comments.push({by :minUser, txt:txt})
-//   }
-
-
-
-// function removeComment(commentId,storyId ) {
-//   const story = storys.find(story => story._id === storyId)
-//   const idx = story.comments.findIndex(comment => comment.id === commentId)
-//   story.comments.splice(idx, 1)
-//   console.log(story.comments.length)
-// }
-
 
 
 

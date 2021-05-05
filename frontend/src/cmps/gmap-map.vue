@@ -5,7 +5,8 @@
     :center="pos"
     :zoom="10"
     map-type-id="terrain"
-    style="width: 300px; height: 300px"
+      @click="closeMap"
+    style="width: 250px; height: 350px"
   >
     <GmapMarker
       v-for="(m, index) in markers"
@@ -13,6 +14,7 @@
       :position="m.position"
       :clickable="true"
       :draggable="true"
+    
     />
   </GmapMap>
   </div>
@@ -41,7 +43,10 @@ export default {
     };
   },
   methods: {
- 
+    closeMap() {
+      console.log('map');
+      this.$emit('closeMap')
+    }
   },
 };
 </script>

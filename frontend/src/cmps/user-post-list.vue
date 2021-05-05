@@ -12,7 +12,7 @@
     <div
       v-if="showModal"
       class="story-details-modal"
-      @click.self="showModal = null"
+     
     >
       <div class="large-modal-img" @click.self="showModal = null">
         <img :src="story.imgUrl" />
@@ -114,7 +114,7 @@ export default {
       const story = this.getStorys.find((story) => story._id === storyId);
       return (this.story = story);
     },
-    addComment(storyId) {
+    addComment(storyId) {   
       if (this.story.comments.length === 4) return;
       const txt = this.comment.txt;
       const loggedinUser = this.loggedinUser;
